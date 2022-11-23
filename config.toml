@@ -1,0 +1,33 @@
+site_title = "MyArxiv"
+limit_days = 7
+cache_url = "https://mlnlp-world.github.io/cache.json"
+
+[[sources]]
+limit = 150
+category = "cs.CL"
+title = "Computation and Language"
+
+[[sources]]
+limit = 150
+category = "cs.CV"
+title = "Computer Vision and Pattern Recognition"
+
+[[sources]]
+limit = 150
+category = "cs.IR"
+title = "Information Retrieval"
+
+[[sources]]
+limit = 150
+category = "cs.LG"
+title = "Machine Learning"
+
+[[sources]]
+limit = 150
+category = "cs.MM"
+title = "Multimedia"
+
+[scripts]
+highlight_title = "scripts/highlight_title.rhai"
+highlight_author = "scripts/highlight_author.rhai"
+highlight_meeting = "scripts/highlight_meeting.rhai"

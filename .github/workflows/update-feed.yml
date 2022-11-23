@@ -1,0 +1,49 @@
+name: Update
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  schedule:
+    # Adjust refresh schedule here. By default, it runs once per day.
+    # Syntax reference: https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule
+    # Recommended tool: https://crontab.guru/
+    - cron: "12 5 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download ArxivFeed
+        env:
+          GITHUB_PAT: ${{ github.token }}
+          REPO: "NotCraft/ArxivFeed"
+          VERSION: "latest"
+          MATCH: "arxivfeed-.+-x86_64-unknown-linux-musl.tar.gz$"
+          RENAME: "arxivfeed.tgz"
+        shell: bash
+        run: |
+          curl -sL --fail \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: Bearer ${GITHUB_PAT}" \
+              "https://api.github.com/repos/${REPO}/releases/${VERSION}" \
+              | jq -r ".assets | .[] | select(.name | test(\"${MATCH}\")) | .url" \
+              | tee asset.url
+          curl -sL --fail \
+            -H "Accept: application/octet-stream" \
+            -H "Authorization: Bearer ${GITHUB_PAT}" \
+              -o "${RENAME}" \
+              "$(cat asset.url)"
+          tar -zxvf arxivfeed.tgz --strip-components 1 $(tar tf arxivfeed.tgz | grep /arxivfeed)
+          chmod +x arxivfeed
+      - name: Build rss
+        run: ./arxivfeed
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target
+          force_orphan: true
