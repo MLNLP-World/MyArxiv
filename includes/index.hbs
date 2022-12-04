@@ -47,11 +47,14 @@
 <section class="header-container">
     <div style="display:flex; justify-content:space-between; align-items:flex-end;">
         <div>
-            <a href="https://github.com/MLNLP-World/MyArxiv" style="text-decoration: none;">
+            {{!-- <a href="https://github.com/MLNLP-World/MyArxiv" style="text-decoration: none;">
                 <div class="header-title">
                     <span class="header-title-preffix">MLNLP</span>//MyArxiv
                 </div>
-            </a>
+            </a> --}}
+            <div class="header-title">
+                MyArxiv
+            </div>
         </div>
 
         <div class=icons>
@@ -79,7 +82,7 @@
                             <article>
                                 <details class="article-expander">
                                     <summary class="article-expander-title">
-                                        {{#if (ne updated published)}}♻{{/if}} {{highlight_title title authors}} {{highlight_meeting comment}}
+                                        {{#if (ne updated published)}}♻{{/if}} {{highlight_title title authors}} {{highlight_conference comment}}
                                     </summary>
                                     <div class="article-authors">
                                         <a href="{{id}}">
@@ -113,12 +116,13 @@
 <footer>
     <div>
         <time id="build-timestamp" datetime="{{build_time}}">
-            <a href="https://github.com/MLNLP-World/MyArxiv/actions">
+            {{!-- <a href="https://github.com/MLNLP-World/MyArxiv/actions">
                 <img id="build-timestamp-badge"
                      src="https://img.shields.io/github/workflow/status/mlnlp-world/myarxiv/Update?label={{time_format
                     build_time "%F %T %Z"}}&style=for-the-badge"
                 alt="{{time_format build_time "%F %T %Z"}}">
-            </a>
+            </a> --}}
+            {{time_format build_time "%F %T %Z"}}
         </time>
     </div>
 </footer>
