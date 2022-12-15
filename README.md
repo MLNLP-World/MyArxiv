@@ -1,5 +1,5 @@
 <p align="center">
-<h1 align="center"> <img src="./imgs/icon/ai.png" width="30" />My Arxiv</h1>
+<h1 align="center"> <img src="./imgs/icon/ai.png" width="30" />MyArxiv</h1>
 </p>
 
 
@@ -104,30 +104,30 @@
 <details open="open">
   <summary>Build Steps</summary>
   <ul>
-    <li><a href="#1.快速上手"> ➤ 1.快速上手</a>
+    <li><a href="#getting-start"> ➤ 1.快速上手</a>
       <ul>
-        <li><a href="###1.1 建立仓库"> ➤ 1.1 建立仓库</a></li>
-        <li><a href="###1.2 修改cachr url"> ➤ 1.2 修改cachr url</a></li>
-        <li><a href="###1.3 Github pages设置"> ➤ 1.3 Github pages设置</a></li>
+        <li><a href="#create-repo"> ➤ 1.1 建立仓库</a></li>
+        <li><a href="#modify-cachr-url"> ➤ 1.2 修改cachr url</a></li>
+        <li><a href="#github-pages-start"> ➤ 1.3 Github pages设置</a></li>
       </ul>
     </li>
     <li>
-      <a href="#2. MyArxiv定制化设置"> ➤ 2. MyArxiv定制化设置</a>
+      <a href="#MyArxiv-customized-settings"> ➤ 2. MyArxiv定制化设置</a>
       <ul>
-        <li><a href="###2.1 托管网站设置"> ➤ 2.1 托管网站设置</a></li>
-        <li><a href="###2.2 Arxiv领域偏好设置"> ➤ 2.2 Arxiv领域偏好设置 </a></li>
-        <li><a href="###2.3 高亮脚本设置"> ➤ 2.3 高亮脚本设置 </a></li>
-        <li><a href="###2.4 workflow设置"> ➤ 2.4 workflow设置 </a></li>
-        <li><a href="###2.5 MyArxiv网页设置"> ➤ 2.5 MyArxiv网页设置 </a></li>
-        <li><a href="###2.6 Github Pages设置"> ➤ 2.6 Github Pages设置 </a></li>
+        <li><a href="#website-settings"> ➤ 2.1 托管网站设置</a></li>
+        <li><a href="#Arxiv-domain"> ➤ 2.2 Arxiv领域偏好设置 </a></li>
+        <li><a href="#highlight-scripts"> ➤ 2.3 高亮脚本设置 </a></li>
+        <li><a href="#workflow-settings"> ➤ 2.4 workflow设置 </a></li>
+        <li><a href="#MyArxiv-website-settings"> ➤ 2.5 MyArxiv网页设置 </a></li>
+        <li><a href="#Github-Pages-settings"> ➤ 2.6 Github Pages设置 </a></li>
       </ul>
     </li>
   </ul>
 </details>
 
-### 1. 快速上手
+<h3 id="getting-start">1.快速上手</h3>
 
-#### 1.1 建立仓库
+<h4 id="create-repo">1.1 建立仓库</h4>
 当前MyArxiv仓库为模版仓库，当我们建立属于自己的MyArxiv时，需要从当前模版新建仓库到自己的Github账号下。
 
 <img src="./imgs/tutorial/1.1.1.png" style="zoom:50%;" />
@@ -136,13 +136,13 @@
 
 <img src="./imgs/tutorial/1.1.2.png" style="zoom:40%;" />
 
-#### 1.2 修改cache url
+<h4 id="modify-cachr-url">1.2 修改cachr url</h4>
 
 修改`config.toml`中文件中的`cache_url`设置（MyArxiv数据缓存地址，该地址设置与你托管当前项目的网站地址相关），将其对应的Github账户，从`MLNLP-World`修改为自己当前的账户，如下图所示：
 
 <img src="./imgs/tutorial/1.2.1.png" style="zoom:50%;" />
 
-#### 1.3 Github pages配置
+<h4 id="github-pages-start">1.3 Github pages设置</h4>
 
 进入当前Repo对应的Settings后，进入Pages页面，设置`Branch`为`gh-pages`分支。
 
@@ -152,9 +152,9 @@
 
 <img src="./imgs/tutorial/1.3.2.png" style="zoom:40%;" />
 
-### 2. MyArxiv定制化设置
+<h3 id="MyArxiv-customized-settings">2. MyArxiv定制化设置</h3>
 MyArxiv是高度可定制化的，使用者可以根据自己的实际需求进行更改，实现个性化定制，如下内容对于可定制化的部分进行说明。
-#### 2.1 托管网站设置
+<h4 id="website-settings">2.1 托管网站设置</h4>
 
 `config.toml`配置文件中，个人网站相关设置部分如下图所示：
 
@@ -176,7 +176,7 @@ cache_url = "https://mlnlp-world.github.io/MyArxiv/cache.json"
   - 若使用默认的Github Pages，那么会在`username.github.io`域名上托管该项目，项目具体地址为`username.github.io/reponame`，就要将`cache_url`设置为`username.github.io/reponame/cache.json`。
   - 若使用其他域名`yourarxivdomain`托管该项目，则要将`cache_url`使用对应的网址进行替换，设置为`yourarxivwebsite/cache.json`。
 
-#### 2.2 Arxiv领域偏好设置
+<h4 id="Arxiv-domain">2.2 Arxiv领域偏好设置</h4>
 
 `config.toml`配置文件中，Arxiv领域偏好设置部分如下图所示：
 
@@ -197,7 +197,7 @@ title = "Computation and Language"
 
 上述设置为一个Arxiv领域对应的设置单元样例，默认设置涵盖NLP研究者主要关注的Arxiv中`cs.CL`、`cs.CV`、`cs.IR`、`cs.LG`以及`cs.MM`领域，使用者可以根据自己的研究偏好参照上述说明进行更改。
 
-#### 2.3 高亮脚本设置
+<h4 id="highlight-scripts">2.3 高亮脚本设置</h4>
 
 `config.toml`配置文件中，高亮脚本设置部分如下图所示：
 
@@ -226,7 +226,7 @@ highlight_meeting = "scripts/highlight_meeting.rhai"
 - `let authors_array = [Kaiming He", "Graham Neubig"];`添加需要高亮的作者信息；
 - `let meetings = [];` 高亮的会议列表，默认包含了当前AI领域的大部分主流会议信息；
 
-#### 2.4 Workflow设置
+<h4 id="workflow-settings">2.4 workflow设置</h4>
 
 workflow设置位于文件`./.github/workflows/update-feed.yml`中：
 
@@ -238,7 +238,7 @@ workflow设置位于文件`./.github/workflows/update-feed.yml`中：
 
 - `- cron: "12 5 * * *"`：对Workflow运行的时间进行设置，即对MyArxiv每天更新的时间进行设置，*可以参考[crontab](https://crontab.guru/)，对时间进行调整*。
 
-#### 2.5 MyArxiv网页设置
+<h4 id="MyArxiv-website-settings">2.5 MyArxiv网页设置</h4>
 
 完成MyArxiv个性定制化后，下面进行网页显示的修改，主要修改目标文件为`./includes/index.hbs`，使用者可以根据自己的风格喜好对网页格式进行各类更改，如下提供两个更改样例:
 
@@ -294,7 +294,7 @@ workflow设置位于文件`./.github/workflows/update-feed.yml`中：
 
 配置修改完成，将上述更改提交至个人的Github仓库。
 
-#### 2.6 Github Pages设置
+<h4 id="Github-Pages-settings">2.6 Github Pages设置</h4>
 
 在完成上述定制后，需要对个人的MyArxiv库Github Pages进行设置，将项目进行托管：
 
