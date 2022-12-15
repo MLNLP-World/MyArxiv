@@ -1,6 +1,6 @@
 site_title = "MyArxiv"
 limit_days = 7
-cache_url = "https://mlnlp-world.github.io/cache.json"
+cache_url = "https://mlnlp-world.github.io/MyArxiv/cache.json"
 
 [[sources]]
 limit = 150
