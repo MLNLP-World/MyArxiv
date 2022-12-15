@@ -1,19 +1,19 @@
 import "scripts/config" as cfg;
 let comment = params[0];
 
-let meetings_rg = Regex(`(?P<key>(${cfg::meetings_rg}))`);
+let conferences_rg = Regex(`(?P<key>(${cfg::conferences_rg}))`);
 
 if comment != () {
-    let meeting = meetings_rg.find(comment);
-    let meeting = meeting.text;
+    let conference = conferences_rg.find(comment);
+    let conference = conference.text;
 
-    let meeting = if meeting != "" {
-        "<span class=\"chip\">" + meeting + "</span>"
+    let conference = if conference != "" {
+        "<span class=\"chip\">" + conference + "</span>"
     } else {
         ""
     };
 
-    meeting
+    conference
 } else {
     ""
 }

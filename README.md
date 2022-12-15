@@ -209,7 +209,7 @@ title = "Computation and Language"
 [scripts]
 highlight_title = "scripts/highlight_title.rhai"
 highlight_author = "scripts/highlight_author.rhai"
-highlight_meeting = "scripts/highlight_meeting.rhai"
+highlight_conference = "scripts/highlight_conference.rhai"
 ```
 
 目前所支持的高亮信息，包括文章标题、作者和会议名称三个方面。然而此部分所给出的信息只有脚本文件的位置，使用者需要转移到脚本文件夹`./scripts`下修改对应的高亮配置文件`./scripts/config.rhai`，其中文件中相关设置部分如下：
@@ -224,7 +224,7 @@ highlight_meeting = "scripts/highlight_meeting.rhai"
   - `let titles_model = ["BERT", "GPT", "Transformer"];`添加需要高亮的文章模型信息；
   - `let titles_method = ["Contrastive Learning", "Prompt"];`添加需要高亮的文章方法信息；
 - `let authors_array = [Kaiming He", "Graham Neubig"];`添加需要高亮的作者信息；
-- `let meetings = [];` 高亮的会议列表，默认包含了当前AI领域的大部分主流会议信息；
+- `let conferences = [];` 高亮的会议列表，默认包含了当前AI领域的大部分主流会议信息；
 
 <h4 id="workflow-settings">2.4 workflow设置</h4>
 
