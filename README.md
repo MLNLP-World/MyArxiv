@@ -32,10 +32,13 @@
   <a href="#使用说明">使用说明</a>/
   <a href="#快速上手指南">快速上手指南</a>/
   <a href="#定制化指南">定制化指南</a>/
+  <a href="#参考资源">参考资源</a>/
+  <a href="#致谢">致谢</a>/
   <a href="#组织者">组织者</a>/
   <a href="#贡献者">贡献者</a>
 </p>
 </div>
+
 
 
 
@@ -319,8 +322,16 @@ workflow设置位于文件`./.github/workflows/update-feed.yml`中：
 
 到这里，就实现了`MyArxiv`的定制化。**Enjoy *YourArxiv*  !**
 
+## <img src="./imgs/icon/link.png" width="25" />参考资源
+该项目部分参考如下项目：
+- [ArxivFeed Template](https://github.com/NotCraft/ArxivDaily)
+- Powered By [ArxivFeed](https://github.com/NotCraft/ArxivFeed)
 
-
+## <img src="./imgs/icon/thanks.png" width="25" />致谢
+感谢如下项目对本项目提供的帮助：
+- [Osmosfeed](https://github.com/osmoscraft/osmosfeed)
+- [AlongWY Version](https://github.com/AlongWY/ArxivDaily)
+- [LooperXX Osmosfeed Version](https://github.com/LooperXX/ArxivDaily-Old)
 
 ## <img src="./imgs/icon/organizer.png" width="25" />组织者
 感谢以下同学对本项目的组织
