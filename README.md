@@ -349,4 +349,5 @@ workflow设置位于文件`./.github/workflows/update-feed.yml`中：
 <a href="https://github.com/AlongWY">  <img src="./imgs/profile/yunlong_feng.png"  width="80" /></a>
 <a href="https://github.com/LooperXX">  <img src="./imgs/profile/xiao_xu.jpg"  width="80" /></a>
 <a href="https://github.com/YudiZh">  <img src="./imgs/profile/yudi_zhang.jpg"  width="80" /></a>
+<a href="https://github.com/entslscheia">  <img src="./imgs/profile/yu_gu.png"  width="80" /></a>
 
