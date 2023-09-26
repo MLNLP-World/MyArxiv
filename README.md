@@ -285,12 +285,12 @@ workflow设置位于文件`./.github/workflows/update-feed.yml`中：
   
     ```js
     <img id="build-timestamp-badge"
-                         src="https://img.shields.io/github/workflow/status/username/reponame/workflowname?label={{time_format
+                         src="https://img.shields.io/github/actions/workflow/status/username/reponame/workflowname?label={{time_format
                         build_time "%F %T %Z"}}&style=for-the-badge"
                     alt="{{time_format build_time "%F %T %Z"}}">
     ```
 
-    其中涉及`workflowname`需要与`./.github/workflows/update-feed.yml`中的`name`的保持一致。
+    其中的`workflowname`为`./.github/workflows/`中的`workflow`文件名，例如`update-feed.yml`
 
 配置修改完成，将上述更改提交至个人的Github仓库。
 
